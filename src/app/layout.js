@@ -10,8 +10,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <Navbar />
-        {children}
+        <div className="flexc flex-col h-screen max-h-screen bg-gray-100">
+          <Navbar />
+          <main className="flex-grow overflow-y-auto bg-gray-800 min-h-screen  text-black">{children}</main>
+        </div>
       </body>
     </html>
   );
